@@ -1,0 +1,5 @@
+FROM postgres:9.3-alpine
+RUN apk update
+RUN apk add tzdata
+COPY ./postgresql /var/lib/postgresql
+VOLUME /usr/share/zoneinfo
